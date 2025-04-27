@@ -22,6 +22,17 @@ CREATE TABLE IF NOT EXISTS shipments (
   last_updated_date DATETIME,
   customer_id INT,
   FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+CREATE TABLE IF NOT EXISTS shipment_metrics (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  date DATE NOT NULL,
+  total_shipments INT DEFAULT 0,
+  delayed_shipments INT DEFAULT 0, 
+  on_time_shipments INT DEFAULT 0,
+  on_time_percentage DECIMAL(5,2), 
+  average_delivery_time_hours DECIMAL(10, 2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );`;
 
   try {
