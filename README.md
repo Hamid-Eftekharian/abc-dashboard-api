@@ -19,10 +19,18 @@ ABC_FASHION_PASS=provided-API-Password
 After the dependencies are installed, start the application by running:
 npm run dev
 
+\*\*\* This BE is prepared for two different solutions:
+
+1. To send data to a React app client
+2. To prepare some metrics and store them in the db so that they can get used in Grafana for beautiful graphs and tables (no need to FE)
+
 Future Improvements
 Here are some future improvements for the backend:
-Implement authentication to secure endpoints, ensuring that only authorized users can access certain data.
-Enhance the metrics calculation by adding more granular data and improving the metrics that are sent to Grafana for more meaningful visualizations.
-Add functionality to send automatic emails to customers regarding shipment statuses (delays, expected delivery) and promotions based on defined business rules. Also, email managers when delays exceed a certain threshold.
-Logging and Monitoring: Implement proper logging (using AWS CloudWatch) for better debugging and real-time error tracking. Set up error monitoring tool Sentry.
-Add unit and integration tests to ensure the application is working as expected
+
+- Implement authentication to secure endpoints, ensuring that only authorized users can access certain data.
+- Enhance the metrics calculation by adding more granular data and improving the metrics that are sent to Grafana for more meaningful visualizations.
+- Add functionality to send automatic emails to customers regarding shipment statuses (delays, expected delivery) and promotions based on defined business rules. Also, email managers when delays exceed a certain threshold.
+- Logging and Monitoring: Implement proper logging (using AWS CloudWatch) for better debugging and real-time error tracking. Set up error monitoring tool Sentry.
+- Add unit and integration tests to ensure the application is working as expected
+
+\*\*\* Implemented alerts in Grafana based on customer-defined rules, enabling notifications when certain thresholds or conditions are met.
