@@ -17,6 +17,6 @@ export async function fetchShipments(): Promise<Shipment[]> {
     httpsAgent,
   });
 
-  console.log("response", res.data.data);
+  // console.log("response", res.data.data);
   return res.data.data;
 }
